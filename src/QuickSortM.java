@@ -13,7 +13,7 @@ public class QuickSortM {
 
 
     public void quickSort(int start, int end){
-        printArray();
+        //printArray();
         int index = partition(start, end);
         if (start < index-1){ quickSort(start, index-1); }
         if (end > index){ quickSort(index, end); }
