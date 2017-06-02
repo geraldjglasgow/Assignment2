@@ -1,5 +1,8 @@
 /**
  * Created by oit_hd on 6/2/2017.
+ *
+ * This class is meant to QuickSort an array with the pivot value being
+ * the first element in the array.
  */
 public class QuickSortF {
 
@@ -12,9 +15,7 @@ public class QuickSortF {
 
 
     public void quickSort(int start, int end){
-        //printArray();
         int index = partition(start, end);
-        System.out.println(index);
         if (start < index-1){ quickSort(start, index-1); }
         if (end > index){ quickSort(index, end); }
     }
@@ -34,22 +35,7 @@ public class QuickSortF {
                 a[end] = temp;
                 start++; end--;
             }
-            printArray();
         } // end while
         return start;
     }
-
-    public void printArray(){
-        System.out.print("[");
-        for(int i=0;i<a.length;i++){
-            if(i == a.length-1){
-                System.out.print(a[i]);
-            } else {
-                System.out.print(a[i] + ", ");
-            }
-        }
-        System.out.print("]");
-        System.out.println();
-    }
-
 }
