@@ -13,6 +13,7 @@ public class QuickSortM {
 
 
     public void quickSort(int start, int end){
+        printArray();
         int index = partition(start, end);
         if (start < index-1){ quickSort(start, index-1); }
         if (end > index){ quickSort(index, end); }
@@ -59,5 +60,12 @@ public class QuickSortM {
         a[start] = temp;
         return a[start];
     }
+    public void printArray(){
+        System.out.println();
+        for(int i=0;i<a.length;i++){
+            System.out.print(a[i] + ", ");
+        }
+    }
+
 
 }

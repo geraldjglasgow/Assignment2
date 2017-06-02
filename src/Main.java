@@ -6,14 +6,14 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int iterations = 20;
-        int arr[] = {64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384};
+        int iterations = 1;
+        int arr[] = {64};  /*, 128, 256, 512, 1024, 2048, 4096, 8192, 16384};*/
         double time[] = new double[arr.length];
         long x, y;
         for (int k = 0; k < arr.length; k++) {
             for (int i = 0; i < iterations; i++) {
                 x = System.nanoTime();
-                QuickSortM first = new QuickSortM(getAverageArray(arr[k]));
+                QuickSortM first = new QuickSortM(getWorstArray(arr[k]));
                 y = System.nanoTime();
                 time[k] += (double)(y-x)/1000000000.00;
             }
