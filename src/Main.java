@@ -1,11 +1,19 @@
 /**
- * Created by oit_hd on 6/2/2017.
+ * Created by Gerald Glasgow on 6/2/2017.
  */
 
 public class Main {
     public static void main(String[] args) {
-        int iterations = 1;
-        int values[] = {64};  /*, 128, 256, 512, 1024, 2048, 4096, 8192, 16384};*/
-        SortingController ctrl = new SortingController(values, iterations);
+        int iterations = 1000000;
+        int values[] = {100,200,300,400,500,600,700,800,900,1000};
+        double micro = 1000000.00;
+        QuickSortF first = new QuickSortF(values, iterations, micro);
+        QuickSortM median = new QuickSortM(values, iterations, micro);
+        QuickSortR random = new QuickSortR(values, iterations, micro);
+        first.startQSortF();
+        median.startQSortM();
+        random.startQSortR();
+
+
     }
 }

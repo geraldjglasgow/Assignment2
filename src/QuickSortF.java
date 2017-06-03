@@ -1,5 +1,5 @@
 /**
- * Created by oit_hd on 6/2/2017.
+ * Created by Gerald Glasgow on 6/2/2017.
  *
  * This class is meant to QuickSort an array with the pivot value being
  * the first element in the array.
@@ -13,7 +13,7 @@ class QuickSortF {
     private int tests=0;
     private double micro;
 
-    private QuickSortF(int[] values, int iterations, double micro){
+    public QuickSortF(int[] values, int iterations, double micro){
         this.values = values;
         this.iterations = iterations;
         this.time = new double [2][values.length];
@@ -46,7 +46,7 @@ class QuickSortF {
         } // end while
         return start;
     }
-    private void startQSortF() {
+    public void startQSortF() {
         long x, y;
         SortingHelper ctrl = new SortingHelper(values);
         /* Average Case */
