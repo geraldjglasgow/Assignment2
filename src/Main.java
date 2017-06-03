@@ -4,7 +4,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        int iterations = 1000000;
+        int iterations = 100;
         int values[] = {100,200,300,400,500,600,700,800,900,1000};
         double micro = 1000000.00;
         QuickSortF first = new QuickSortF(values, iterations, micro);
@@ -13,7 +13,5 @@ public class Main {
         first.startQSortF();
         median.startQSortM();
         random.startQSortR();
-
-
     }
 }
