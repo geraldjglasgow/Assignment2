@@ -113,7 +113,7 @@ class QuickSortR {
             }
             time[tests][k] /= (double) (iterations);
         }
-        System.out.println("Results for pivot = Median(first, middle, last) for worst case");
+        System.out.println("Results for pivot = Random(first, middle, last) for worst case");
         ctrl.printResults(time, tests);
         System.out.println();
     }
